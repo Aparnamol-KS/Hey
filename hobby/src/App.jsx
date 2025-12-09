@@ -10,6 +10,7 @@ const nanImage = "/assets/images/nandu.png";
 const athImage = "/assets/images/athulya.png";
 const aliImage = "/assets/images/alisha.png";
 const aarImage = "/assets/images/aarya.png";
+const apaImage = "/assets/images/aparna.png";
 
 const m1 = "/assets/images/m1.jpg";
 const m2 = "/assets/images/m2.jpeg";
@@ -53,6 +54,7 @@ const aAudio = "/assets/audio/aarya.mp3";
 const hAudio = "/assets/audio/hazel.mp3";
 const aliAudio = "/assets/audio/alisha.mp3";
 const athAudio = "/assets/audio/athulya.mp3";
+const apaAudio = "/assets/audio/aparna.mp3";
 // Videos
 const v1 = "/assets/video/v1.mp4";
 const v2 = "/assets/video/v2.mp4";
@@ -617,14 +619,14 @@ const BalloonPop = () => {
 
   const wishes = [
     "May you get all dreams you shouting everyday 😌✨",
-    "Always be our chapri queen, only you having that kannapu taste 🤣",
+    "Always be our chapri queen, only you having that kannapi taste 🤣",
     "Don’t stop calling us Ooola, we enjoying only that 😭😂",
     "Never stop us from kaliyakaling you and sollley, full-time entertainment 😌🔥",
     "Stay shy but still full chaos energy 💥😎",
     "Soft heart ok… but roasting power keep max 💘",
     "Continue your airhead moments, free comedy for us 😂",
     "Be overconfident but cute always, only you can 😏🌸",
-    "Keep disappearing like kannapu ghost, but still unforgettable 😌💖"
+    "Keep disappearing like kannapi ghost, but still unforgettable 😌💖"
   ];
 
 
@@ -932,6 +934,13 @@ Appo seri ❤️`,
         audio: cAudio,
         photo: chipImage
       },
+      {
+        from: "Aparna",
+        "message": "Hey Alicia,\n\nHappy Birthday to the most unstable but still high‑performance human processor I ever seen.\n\nOutside calm ah, but inside your background tasks always running at 300% CPU.\nOverthinking module never sleeps — even when you sleep.\nPower-saving mode also doesn’t work on you 😪.\n\nYour face UI also permanently stuck on one expression:\n\nif (emotion == undefined) return \"ippo karayuvo?\";\n\nSoft-hearted kernel, but your confidence OS runs on one custom ROM — sometimes premium, sometimes beta testing, sometimes full system crash, nobody knows.\n\nCommunication system also works like weak WiFi:\n- Signal full, reply not delivered.\n- DIGC (Disappearing In Group Chats) — your most powerful feature.\n- Even WhatsApp servers look at you and say, “Bro why she vanish again?”\n\nAnd let’s not forget your 5G pride software:\n- Always flexing “enikku 5G und” like you are walking mobile tower.\n- Hotspot kodukkunnathil world record — but reply speed still 2G demo version.\n- Portable network provider ah, but brain network sometimes “No Service”.\n\nSome additional system behaviours:\n- Your default response engine only has two outputs: “ok hmm”\n- Even if we send one 14-page essay with full emotion + diagram + appendix, still output = ok hmm.\n- NLP model dead or what?\n\n- Power nap module too powerful — You close eyes for 5 minutes, suddenly REM sleep v4.0 activated.\n- Deep sleep within 0.2 seconds — world fastest boot‑to‑hibernate champion.\n\n- Motivation API is one-directional: You give motivation to everyone, push notifications, life advice, TED talk everything.\n- But when it comes to yourself? Error 404: Motivation Not Found.\n\nPersonality-wise, you are a full-stack bundle:\n- Frontend: cute, calm, fashionable\n- Backend: chaos + overheating warnings\n- Database: feelings stored in uncompressed RAW format\n- API: mood-based response time\n- Security: trustworthy; encrypted heart\n- Processor: sometimes slow, but execution power = 100% dedication\n- Battery: always 2% but still alive\n- Camera: crying filter auto-enabled\n- Network: 5G outside, Edge (E) inside\n\nEven with bugs, random crashes, and emotional updates… you still function better than 90% of the humans alive.\n\nHonestly, one of the best friend modules any system can install.\n\nThis year I hope you get:\n- Less RAM usage (overthinking delete pls)\n- Stable emotions v2.0\n- More happiness bandwidth\n- Bug-free confidence upgrade\n- Zero drama notifications\n- Normal sleep cycle patch\n- And network stability (mental + mobile)\n\nHappy Birthday, Alicia!\nContinue being our limited-edition, half-bug half-genius build.\nNever change the chaotic firmware — it's iconic.\n\n",
+        audio: apaAudio,
+        photo: apaImage
+      }
+
     ],
     polaroids: [
 
