@@ -1,61 +1,78 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Heart, Sparkles, Star, Smile, Coffee, Music, Sun, Moon, X, Mail, Play } from 'lucide-react';
-import heroImage from "./assets/images/alicia.png";
 
-import cAudio from "./assets/audio/chippy.mp3"
-import nAudio from "./assets/audio/nandana.mp3"
-import aAudio from "./assets/audio/aarya.mp3"
-import hAudio from "./assets/audio/hazel.mp3"
+// Images
+const heroImage = "/assets/images/alicia.png";
 
-import chipImage from "./assets/images/ch.png"
-import hazImage from "./assets/images/hazel.png"
-import nanImage from "./assets/images/nandu.png"
-import athImage from "./assets/images/athulya.png"
-import aliImage from "./assets/images/alisha.png"
-import aarImage from "./assets/images/aarya.png"
+const chipImage = "/assets/images/ch.png";
+const hazImage = "/assets/images/hazel.png";
+const nanImage = "/assets/images/nandu.png";
+const athImage = "/assets/images/athulya.png";
+const aliImage = "/assets/images/alisha.png";
+const aarImage = "/assets/images/aarya.png";
 
+const m1 = "/assets/images/m1.jpg";
+const m2 = "/assets/images/m2.jpeg";
+const m3 = "/assets/images/m3.jpg";
+const m4 = "/assets/images/m4.jpg";
+const m5 = "/assets/images/m5.jpg";
+const m6 = "/assets/images/m6.jpg";
+const m7 = "/assets/images/m7.jpg";
+const m8 = "/assets/images/m8.jpg";
+const m9 = "/assets/images/m9.jpg";
+const m10 = "/assets/images/m10.jpg";
+const m11 = "/assets/images/m11.jpg";
+const m12 = "/assets/images/m12.jpg";
+const m13 = "/assets/images/m13.jpg";
+const m14 = "/assets/images/m14.jpg";
+const m15 = "/assets/images/m15.jpg";
+const m16 = "/assets/images/m16.jpg";
+const m17 = "/assets/images/m17.jpg";
+const m18 = "/assets/images/m18.jpg";
+const m19 = "/assets/images/m19.jpg";
+const m20 = "/assets/images/m20.jpg";
+const m21 = "/assets/images/m21.jpg";
+const m22 = "/assets/images/m22.jpg";
+const m23 = "/assets/images/m23.jpg";
+const m24 = "/assets/images/m24.jpg";
+const m25 = "/assets/images/m25.jpg";
+const m26 = "/assets/images/m26.jpg";
+const m27 = "/assets/images/m27.jpg";
+const m28 = "/assets/images/m28.jpg";
 
-import v1 from "./assets/video/v1.mp4"
-import v2 from "./assets/video/v2.mp4"
-import v3 from "./assets/video/v3.mp4"
-import v4 from "./assets/video/v4.mp4"
-import v5 from "./assets/video/v5.mp4"
-import v6 from "./assets/video/v6.mp4"
-import v7 from "./assets/video/v7.mp4"
-import v8 from "./assets/video/v8.mp4"
-import v9 from "./assets/video/v9.mp4"
-import v10 from "./assets/video/v10.mp4"
-import v11 from "./assets/video/v11.mp4"
-import v12 from "./assets/video/v12.mp4"
-import v13 from "./assets/video/v13.mp4"
-import v14 from "./assets/video/v14.mp4"
-import v15 from "./assets/video/v15.mp4"
-import v16 from "./assets/video/v16.mp4"
-import v17 from "./assets/video/v17.mp4"
-import v18 from "./assets/video/v18.mp4"
+const m29 = "/assets/images/m29.jpg";
+const m30 = "/assets/images/m30.jpg";
+const m31 = "/assets/images/m31.jpg";
+const m32 = "/assets/images/m32.jpg";
+const m33 = "/assets/images/m33.jpg";
 
-import m1 from "./assets/images/m1.jpg"
-import m2 from "./assets/images/m2.jpeg"
-import m3 from "./assets/images/m3.jpg"
-import m4 from "./assets/images/m4.jpg"
-import m5 from "./assets/images/m5.jpg"
-import m6 from "./assets/images/m6.jpg"
-import m7 from "./assets/images/m7.jpg"
-import m8 from "./assets/images/m8.jpg"
-import m9 from "./assets/images/m9.jpg"
-import m10 from "./assets/images/m10.jpg"
-import m11 from "./assets/images/m11.jpg"
-import m12 from "./assets/images/m12.jpg"
-import m13 from "./assets/images/m13.jpg"
-import m14 from "./assets/images/m14.jpg"
-import m15 from "./assets/images/m15.jpg"
-import m16 from "./assets/images/m16.jpg"
-import m17 from "./assets/images/m17.jpg"
-import m18 from "./assets/images/m18.jpg"
-import m19 from "./assets/images/m19.jpg"
-import m20 from "./assets/images/m20.jpg"
-import m21 from "./assets/images/m21.jpg"
-import m22 from "./assets/images/m22.jpg"
+// Audio
+const cAudio = "/assets/audio/chippy.mp3";
+const nAudio = "/assets/audio/nandana.mp3";
+const aAudio = "/assets/audio/aarya.mp3";
+const hAudio = "/assets/audio/hazel.mp3";
+const aliAudio = "/assets/audio/alisha.mp3";
+const athAudio = "/assets/audio/athulya.mp3";
+// Videos
+const v1 = "/assets/video/v1.mp4";
+const v2 = "/assets/video/v2.mp4";
+const v3 = "/assets/video/v3.mp4";
+const v4 = "/assets/video/v4.mp4";
+const v5 = "/assets/video/v5.mp4";
+const v6 = "/assets/video/v6.mp4";
+const v7 = "/assets/video/v7.mp4";
+const v8 = "/assets/video/v8.mp4";
+const v9 = "/assets/video/v9.mp4";
+const v10 = "/assets/video/v10.mp4";
+const v11 = "/assets/video/v11.mp4";
+const v12 = "/assets/video/v12.mp4";
+const v13 = "/assets/video/v13.mp4";
+const v14 = "/assets/video/v14.mp4";
+const v15 = "/assets/video/v15.mp4";
+const v16 = "/assets/video/v16.mp4";
+const v17 = "/assets/video/v17.mp4";
+const v18 = "/assets/video/v18.mp4";
+
 // Confetti Component
 const Confetti = () => {
   const confettiPieces = Array.from({ length: 50 }, (_, i) => ({
@@ -645,7 +662,7 @@ const BalloonPop = () => {
         </div>
         {revealedWish && (
           <div className="bg-white rounded-2xl p-8 shadow-2xl animate-bounce-in">
-            <p className="text-2xl font-medium text-purple-600 pacifico">{revealedWish}</p>
+            <p className="text-2xl font-medium text-purple-600 font-[kalam]">{revealedWish}</p>
           </div>
         )}
       </div>
@@ -850,8 +867,13 @@ Wishing you a year filled with happiness, good health, and all the love you trul
       },
       {
         from: "Athulya",
-        message: ``,
-        audio: nAudio,
+        message: `Dear Loki,
+
+Happy birthday to you!
+You’re honestly such a good friend to me. Whenever I needed someone, you were there — listening to all my dramas and staying with me without even realizing how much comfort you were giving. I don’t say it often, but it really means a lot.
+
+And next year, let’s try to be a little less clumsy and not jump into problems and then blame unluckiness for everything. We’ll get better, slowly. And yes — one day we are definitely going for that movie date to watch Zootopia. And we’ll have that pizza date too, just like the Domino’s run after Speridian.`,
+        audio: athAudio,
         photo: athImage
       },
       {
@@ -869,7 +891,7 @@ You will find  your dreaming job👷‍♀️ soon
 Kore kore Santhosham and cash 💸 undaakatte ninakk in ur whole life 🫂🫂🫂🫂
   
 Kittunnathellaam enikkum ninakum paathi 👉👈`,
-        audio: nAudio,
+        audio: aliAudio,
         photo: aliImage
       },
       {
@@ -914,23 +936,40 @@ Appo seri ❤️`,
     polaroids: [
 
       { image: m17, caption: "Making memories 📸" },
-      { image: m18, caption: "Making memories 📸" },
+
+      { image: m23, caption: "Making memories 📸" },
+      { image: m25, caption: "Making memories 📸" },
+      { image: m28, caption: "Making memories 📸" },
+      { image: m24, caption: "Making memories 📸" },
+
       { image: m19, caption: "Making memories 📸" },
       { image: m20, caption: "Making memories 📸" },
+      { image: m18, caption: "Making memories 📸" },
       { image: m6, caption: "Making memories 📸" },
       { image: m7, caption: "Making memories 📸" },
-      { image: m8, caption: "Making memories 📸" },
-      { image: m9, caption: "Making memories 📸" },
+
       { image: m10, caption: "Making memories 📸" },
       { image: m11, caption: "Making memories 📸" },
       { image: m15, caption: "Making memories 📸" },
       { image: m16, caption: "Making memories 📸" },
 
+      { image: m32, caption: "Making memories 📸" },
       { image: m21, caption: "Making memories 📸" },
 
       { image: m14, caption: "Making memories 📸" },
       { image: m1, caption: "Making memories 📸" },
+      { image: m29, caption: "Making memories 📸" },
+
+
+      { image: m33, caption: "Making memories 📸" },
+
       { image: m2, caption: "Making memories 📸" },
+      { image: m8, caption: "Making memories 📸" },
+      { image: m9, caption: "Making memories 📸" },
+      { image: m30, caption: "Making memories 📸" },
+      { image: m31, caption: "Making memories 📸" },
+
+
       { image: m3, caption: "Making memories 📸" },
       { image: m4, caption: "Making memories 📸" },
       { image: m5, caption: "Making memories 📸" },
@@ -938,6 +977,18 @@ Appo seri ❤️`,
 
       { image: m12, caption: "Making memories 📸" },
       { image: m13, caption: "Making memories 📸" },
+
+      { image: m26, caption: "Making memories 📸" },
+
+      { image: m27, caption: "Making memories 📸" },
+
+
+
+
+
+
+
+
 
     ],
 
@@ -948,7 +999,7 @@ Thank you for all the laughs, the random disappearings, the weird advices, the a
 I hope this year give you all the things you dreaming and shouting about. Stay same chaos-but-cute person ok. 
 
 Happy Birthday, my one and only kannapi chapri queen! 🎂✨`,
-from: "Your Best Friend"
+    from: "Your Best Friend"
 
   };
 
@@ -1029,7 +1080,7 @@ from: "Your Best Friend"
       <ShortVideos videos={config.shortVideos} />
 
       <FriendLetters letters={config.friendLetters} />
-    
+
 
 
       <PolaroidWall polaroids={config.polaroids} />
